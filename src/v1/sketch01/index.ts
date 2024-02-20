@@ -4,22 +4,17 @@ import rawVertexShader from './raw_triangle.vs';
 import rawFragmentShader from './raw_triangle.fs';
 
 class Canvas extends ThreeBase {
-  private triangle: THREE.Mesh<
-    THREE.BufferGeometry,
-    THREE.ShaderMaterial,
-    THREE.Object3DEventMap
-  >;
-
   constructor(canvas: HTMLCanvasElement) {
+    // 確認：第二引数をfalse（setAnimationLoop処理を実行しない）にした時、出力されないのはなぜか？
     super(canvas, true);
     this.init();
-    this.triangle = this.createTriangle();
+    this.createTriangle();
   }
 
   private init() {
     this.scene.background = new THREE.Color('#111');
-    // this.camera.position.set(0, -5, 5);
-    // this.camera.lookAt(0, 0, 0);
+    this.camera.position.set(0, 0, 5);
+    this.camera.lookAt(0, 0, 0);
   }
 
   private createTriangle() {
@@ -63,7 +58,6 @@ class Canvas extends ThreeBase {
 
   protected render() {
     this.updateTime();
-    this.triangle.material.uniforms.uTime.value += this.time.delta;
     super.render();
   }
 }

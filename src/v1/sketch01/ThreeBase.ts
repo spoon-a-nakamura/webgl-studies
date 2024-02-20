@@ -15,10 +15,11 @@ export abstract class ThreeBase {
     this.camera = this.createCamera();
     this.scene = this.createScene();
     this.clock = new THREE.Clock();
+    window.addEventListener('resize', this.resize.bind(this));
+
     if (enableAnimation) {
       this.renderer.setAnimationLoop(this.render.bind(this));
     }
-    window.addEventListener('resize', this.resize.bind(this));
   }
 
   private createRenderer(canvas: HTMLCanvasElement) {
