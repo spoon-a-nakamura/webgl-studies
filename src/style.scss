@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Sixtyfour&display=swap');
+
 * {
   padding: 0;
   margin: 0;
@@ -7,26 +9,108 @@
 
 html {
   font-size: 62.5%;
-  background: #0e0e0e;
-  overflow: hidden;
+  background: rgba(0, 0, 0, 0.95);
+  font-family: 'Sixtyfour', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: 'BLED' 0, 'SCAN' -20;
+  letter-spacing: -0.1rem;
+  &:not(.page-index) {
+    overflow: hidden;
+  }
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+  font-size: 3rem;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.04);
+  display: block;
+  color: rgba(255, 255, 255, 0.2);
 }
 
 a {
-  font-size: 30px;
-  color: #ffc408;
+  font-size: 3rem;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  display: block;
+  color: #0f7d7e;
   text-decoration: none;
+  transition: all 0.1s;
+  &:hover {
+    background: rgba(255, 255, 255, 0.03);
+    font-variation-settings: 'BLED' 20, 'SCAN' -56;
+    font-weight: 800;
+    padding-left: 2.5rem;
+    color: #0b999b;
+  }
 }
 
 ul {
-  padding: 30px;
+  padding: 3rem;
   list-style: none;
-}
-
-li + li {
-  margin-top: 20px;
+  background: rgba(255, 255, 255, 0.02);
+  li {
+    & + li {
+      margin-top: 2rem;
+    }
+  }
+  &.secondary-list {
+    a {
+      font-size: 1.8rem;
+    }
+  }
 }
 
 canvas {
   width: 100%;
   height: 100vh;
+}
+
+.breadcrumbs {
+  font-size: 2rem;
+  display: block;
+  ul {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem 3rem;
+    background: none;
+    li {
+      margin: 0;
+      font-size: 1rem;
+      color: rgba(255, 255, 255, 0.3);
+      a {
+        font-size: 1rem;
+        padding: 0;
+        background: none;
+        color: #0f7d7e;
+        display: inline-block;
+        text-decoration: none;
+        transition: all 0.1s;
+      }
+    }
+  }
+}
+
+.heading {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.3);
+  img {
+    width: 2rem;
+    border-radius: 1000px;
+  }
+}
+
+.back_home {
+  // margin: 3rem;
 }
