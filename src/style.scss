@@ -22,7 +22,7 @@ html {
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
 }
 
 h2 {
@@ -100,14 +100,16 @@ canvas {
 
 .heading {
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
   align-items: center;
   padding: 2rem;
   background: rgba(255, 255, 255, 0.1);
   color: rgba(255, 255, 255, 0.3);
   img {
-    width: 2rem;
+    width: 1.5rem;
     border-radius: 1000px;
+    position: relative;
+    top: 0.5rem;
   }
 }
 
