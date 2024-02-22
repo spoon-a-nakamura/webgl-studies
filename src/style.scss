@@ -139,5 +139,8 @@ canvas {
     font-size: 1rem;
     color: #999;
     padding: 1rem;
+    &:hover {
+      color: #0f7d7e;
+    }
   }
 }
