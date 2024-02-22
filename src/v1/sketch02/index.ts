@@ -63,6 +63,8 @@ class Canvas extends ThreeBase {
 
   protected render() {
     this.updateTime();
+    // https://threejs.org/docs/#api/en/core/Object3D.frustumCulled
+    // Shaderではなくthree.jsが提供している機能として、frustumCulledがデフォルトでtrueになっているので、カメラからBoundingSphereの境界から外れるとよしなに描画を停止させてくれる。これは、Shaderに入る前の処理でありあくまでthreeがしていることで、Shaderの中で処理している内容が画面外になるとかは検知はできない。
     this.camera.position.z += this.time.delta * -0.3;
     this.triangle.rotation.z += this.time.delta * this.time.elapsed;
     super.render();
