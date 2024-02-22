@@ -5,8 +5,7 @@ import rawFragmentShader from './raw_triangle.fs';
 
 class Canvas extends ThreeBase {
   constructor(canvas: HTMLCanvasElement) {
-    // 確認：第二引数をfalse（setAnimationLoop処理を実行しない）にした時、出力されないのはなぜか？
-    super(canvas, true);
+    super(canvas);
     this.init();
     this.createTriangle();
   }

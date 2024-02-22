@@ -7,19 +7,16 @@ export abstract class ThreeBase {
   protected readonly time = { delta: 0, elapsed: 0 };
 
   // 確認：なぜ protected readonly でないのか？
-  // protected readonly clock: THREE.Clock;
+  // 回答：three.jsの中にあるclockはアニメーションフレームの中で１回しか呼んではいけないから。
   private clock: THREE.Clock;
 
-  constructor(canvas: HTMLCanvasElement, enableAnimation: boolean = false) {
+  constructor(canvas: HTMLCanvasElement) {
     this.renderer = this.createRenderer(canvas);
     this.camera = this.createCamera();
     this.scene = this.createScene();
     this.clock = new THREE.Clock();
     window.addEventListener('resize', this.resize.bind(this));
-
-    if (enableAnimation) {
-      this.renderer.setAnimationLoop(this.render.bind(this));
-    }
+    this.renderer.setAnimationLoop(this.render.bind(this));
   }
 
   private createRenderer(canvas: HTMLCanvasElement) {
