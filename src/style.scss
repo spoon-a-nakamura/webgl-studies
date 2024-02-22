@@ -120,7 +120,7 @@ canvas {
 .canvas-h1 {
   font-family: 'DotGothic16', sans-serif;
   font-weight: 400;
-  font-style: normal;
+  letter-spacing: 0.1rem;
   position: absolute;
   display: flex;
   justify-content: center;
@@ -128,4 +128,16 @@ canvas {
   color: #999;
   width: 100%;
   padding: 5rem;
+}
+.back-home {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  bottom: 2rem;
+  a {
+    font-size: 1rem;
+    color: #999;
+    padding: 1rem;
+  }
 }
