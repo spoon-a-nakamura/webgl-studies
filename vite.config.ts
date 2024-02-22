@@ -13,10 +13,9 @@ export default defineConfig(({ mode }) => {
       rollupOptions: {
         input: [
           path.resolve(__dirname, './src/index.html'),
-          path.resolve(__dirname, './src/sketch01/index.html'),
-          path.resolve(__dirname, './src/sketch02/index.html'),
-          path.resolve(__dirname, './src/sketch03/index.html'),
-          path.resolve(__dirname, './src/sketch04/index.html'),
+          path.resolve(__dirname, './src/v1/sketch01/index.html'),
+          path.resolve(__dirname, './src/v1/sketch02/index.html'),
+          path.resolve(__dirname, './src/v1/sketch03/index.html'),
         ],
       },
     },
