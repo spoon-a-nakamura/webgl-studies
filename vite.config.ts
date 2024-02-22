@@ -6,7 +6,7 @@ export default defineConfig(({ mode }) => {
   return {
     root: './src',
     publicDir: '../public',
-    base: '/',
+    base: '/webgl-studies/',
     plugins: [glsl()],
     build: {
       outDir: '../dist',
